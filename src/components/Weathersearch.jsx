@@ -42,7 +42,7 @@ const WeatherSearch = () => {
   }, [cities, setLocation]);
 
   const fetchWeather = async (cityName) => {
-    const url = `http://api.weatherapi.com/v1/current.json?key=${VITE_WEATHER_API_KEY}&q=${cityName}&aqi=no`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${VITE_WEATHER_API_KEY}&q=${cityName}&aqi=no`;
 
     try {
       const response = await fetch(url);
