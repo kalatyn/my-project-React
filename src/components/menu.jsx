@@ -28,7 +28,7 @@ const Menu = () => {
                 <Link to="/todo">
                   <img
                     className="app_icon_img"
-                    src="img/todo.png"
+                    src="/img/todo.png"
                     alt="To-Do App"
                   />
                 </Link>
@@ -37,7 +37,7 @@ const Menu = () => {
                 <Link to="/musik">
                   <img
                     className="app_icon_img"
-                    src="img/music.png"
+                    src="/img/music.png"
                     alt="Music App"
                   />
                 </Link>
@@ -46,7 +46,7 @@ const Menu = () => {
                 <Link to="/weather">
                   <img
                     className="app_icon_img"
-                    src="img/weather02-512.webp"
+                    src="/img/weather02-512.webp"
                     alt="Weather App"
                   />
                 </Link>

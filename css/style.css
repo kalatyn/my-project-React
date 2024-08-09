@@ -105,6 +105,11 @@ body {
   justify-content: center;
   grid-template-rows: max-1fr 1fr 1fr 1fr;
 }
+@media screen and (max-width: 600px) {
+  .app_icons {
+    grid-template-columns: 1fr;
+  }
+}
 .app_icon {
   width: 200px;
   aspect-ratio: 1 / 1;
