@@ -1,0 +1,232 @@
+@import "utilities";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+  font-family: Nunito, sans-serif;
+}
+body {
+  background-color: azure;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.site-header {
+  height: 50px;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+.site-footer {
+  height: 50px;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: relative;
+  bottom: 0;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  min-height: calc(100vh - 100px);
+
+  margin: 0 auto;
+  padding: 30px;
+}
+.lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.list {
+  width: 100%;
+  padding: 0px 15px;
+}
+.list:last-child {
+  border-left: 1px dotted black;
+}
+.inputTask {
+  width: 50%;
+  margin-bottom: 30px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  background-color: aquamarine;
+  font-size: 20px;
+  padding: 0 3%;
+  box-shadow: 5px 5px 5px rgba(28, 98, 66, 0.5);
+  margin-right: 2%;
+}
+.inputTask_date_time {
+  width: 15%;
+  margin-bottom: 30px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  background-color: aquamarine;
+  font-size: 20px;
+  padding: 0 3%;
+  box-shadow: 5px 5px 5px rgba(28, 98, 66, 0.5);
+  margin-right: 2%;
+}
+.addTask {
+  width: 10%;
+  height: 50px;
+  border-radius: 20px;
+  float: right;
+  border: none;
+  background-color: aquamarine;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(28, 98, 66, 0.5);
+  transition: all 0.3s;
+  &:hover {
+    scale: 0.98;
+    box-shadow: 2px 2px 2px rgba(28, 98, 66, 0.5);
+  }
+  &:active {
+    scale: 0.96;
+    box-shadow: 0px 0px 0px rgba(28, 98, 66, 0.5);
+  }
+}
+.app_icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: max-1fr 1fr 1fr 1fr;
+}
+.app_icon {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+}
+.app_icon_img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 1;
+    scale: 1.1;
+  }
+}
+
+.main_page_btn {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s;
+  display: none;
+  &:hover {
+    opacity: 1;
+    scale: 1.1;
+  }
+}
+li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  min-height: 70px;
+  height: auto;
+  background-color: aquamarine;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 10px;
+  padding: 0 10px;
+  box-shadow: 5px 5px 5px rgba(28, 98, 66, 0.5);
+  font-size: 1.5rem;
+  text-align: start;
+  & div {
+    width: 95%;
+    padding: 0px 10px;
+    height: 30px;
+  }
+  & button {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: red;
+    color: white;
+    transition: all 0.3s;
+    position: relative;
+    align-self: center;
+    justify-self: end;
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
+  & input {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: none;
+    background-color: rgb(171, 78, 78);
+    color: rgb(4, 255, 0);
+    transition: all 0.3s;
+  }
+
+  & span {
+    font-size: 10px;
+  }
+}
+.play-pause {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+.weather_card {
+  width: 27%;
+  min-width: 260px !important;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+}
+.weather_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+.delete {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  &:hover {
+    opacity: 1;
+    scale: 1.1;
+  }
+}
